@@ -1,0 +1,262 @@
+:root {
+    --Strong-cyan: hsl(172, 67%, 45%);
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan: hsl(186, 14%, 43%);
+    --Grayish-cyan: hsl(184, 14%, 56%);
+    --Light-grayish-cyan: hsl(185, 41%, 84%);
+    --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+
+}
+
+* {
+    font-family: 'Space Mono', monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Light-grayish-cyan);
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+}
+
+.container h1 {
+    color: var(--Dark-grayish-cyan);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.card {
+    background-color: var(--White);
+    width: 700px;
+    border-radius: 16px;
+    padding: 32px;
+    display: flex;
+}
+
+section {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.output-section {
+    background-color: var(--Very-dark-cyan);
+    padding: 32px;
+    border-radius: 10px;
+}
+
+.bill {
+    margin-bottom: 40px;
+}
+
+.bill label {
+    color: var(--Dark-grayish-cyan);
+    font-weight: 700;
+    font-size: small;
+}
+
+.bill-input, .people-input {
+    position: relative;
+}
+
+.bill-input input, .people-input input {
+    background-color: var(--Very-light-grayish-cyan);
+    width: 290px;
+    text-align: right;
+    font-weight: 700;
+    padding: 10px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.bill-input img, .people-input img {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate(-50%,-5%);
+}
+
+.tip label {
+    color: var(--Dark-grayish-cyan);
+    font-weight: 700;
+    font-size: small;
+}
+
+.btn {
+    background-color: var(--Very-dark-cyan);
+    color: var(--White);
+    width: 90px;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 10px;
+    gap: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.active-tip {
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+    font-weight: bolder;
+}
+
+.btn:hover {
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+}
+
+#custom {
+    background-color: var(--Very-light-grayish-cyan);
+    text-align: center;
+    width: 90px;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.tip {
+    margin-bottom: 40px;
+}
+
+.people-label {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 30px;
+    color: var(--Dark-grayish-cyan);
+    font-weight: 700;
+    font-size: small;
+}
+
+.error {
+    color: red;
+    display: none;
+}
+
+.tip-amount {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+p {
+    color: var(--White);
+    font-size: small;
+    font-weight: 700;
+    line-height: 2;
+}
+
+.tip-amount h1, .total h1 {
+    color: var(--Strong-cyan);
+    font-size: 32px;
+    font-weight: bold;
+}
+
+span {
+    color: var(--Dark-grayish-cyan);
+    font-size: small;
+    font-weight: 700;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+}
+
+.reset-btn {
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+    font-weight: 700;
+    width: 100%;
+    padding: 8px;
+    margin-top: 100px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.reset-btn:hover {
+    background-color: var(--Light-grayish-cyan);
+}
+
+@media (max-width: 500px) {
+    .container {
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .card {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 8px;
+        width: 100%;
+        margin-top: auto;
+    }
+
+    .input-section, .output-section {
+        width: 100%;
+        padding: 16px;
+    }
+
+    .bill {
+        margin-bottom: 30px;
+    }
+
+    .bill-input input, .people-input input {
+        width: 100%;
+        height: 50px;
+        color: var(--Very-dark-cyan);
+        font-size: 16px;
+    }
+
+    .btn {
+        width: 195px;
+        height: 50px;
+        align-items: center;
+    }
+
+    #custom {
+        width: 195px;
+        height: 50px;
+    }
+
+    .tips {
+        margin-bottom: 30px;
+    }
+
+    .input-section {
+        margin-bottom: 30px;
+    }
+
+    .reset-btn {
+        margin-top: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
